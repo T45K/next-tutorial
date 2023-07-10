@@ -7,7 +7,7 @@ import Image from 'next/image';
 const name = 'Tasuku Nakagawa';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -63,4 +63,9 @@ export default function Layout({ children, home }) {
       )}
     </div>
   );
+}
+
+export interface LayoutProps {
+  children: any;
+  home: boolean;
 }
